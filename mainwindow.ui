@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>971</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>农作物灌溉量计算软件</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="jsgg.qrc">
+    <normaloff>:/res/灌溉.png</normaloff>:/res/灌溉.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 16pt &quot;微软雅黑&quot;;</string>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="9" column="0" colspan="4">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>计算灌溉量</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>清空数据</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="text">
+         <string>导出结果</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label11">
+      <property name="text">
+       <string>小区面积(m^2)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLabel" name="label4">
+      <property name="text">
+       <string>土壤温度1(℃)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QLineEdit" name="lineEdit13"/>
+    </item>
+    <item row="3" column="2">
+     <widget class="QLabel" name="label8">
+      <property name="text">
+       <string>土壤温度3(℃)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label1">
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(0, 0, 255);</string>
+      </property>
+      <property name="text">
+       <string>小区标识</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="3">
+     <widget class="QLineEdit" name="lineEdit10"/>
+    </item>
+    <item row="4" column="2">
+     <widget class="QLabel" name="label10">
+      <property name="text">
+       <string>平均温度(℃)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="lineEdit7"/>
+    </item>
+    <item row="2" column="2">
+     <widget class="QLabel" name="label6">
+      <property name="text">
+       <string>土壤温度2(℃)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label9">
+      <property name="text">
+       <string>平均水分(Vol%)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label7">
+      <property name="text">
+       <string>土壤水分3(Vol%)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="2">
+     <widget class="QLabel" name="label12">
+      <property name="text">
+       <string>灌溉深度(m)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label13">
+      <property name="text">
+       <string>灌溉目标水分含量(Vol%)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="2">
+     <widget class="QLabel" name="label14">
+      <property name="text">
+       <string>预计降水量(mm)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLineEdit" name="lineEdit9"/>
+    </item>
+    <item row="5" column="1">
+     <widget class="QLineEdit" name="lineEdit11"/>
+    </item>
+    <item row="6" column="3">
+     <widget class="QLineEdit" name="lineEdit14"/>
+    </item>
+    <item row="5" column="3">
+     <widget class="QLineEdit" name="lineEdit12"/>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit1"/>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="lineEdit5"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label3">
+      <property name="text">
+       <string>土壤水分1(Vol%)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label5">
+      <property name="text">
+       <string>土壤水分2(Vol%)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="label2">
+      <property name="text">
+       <string>采集时间</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QLineEdit" name="lineEdit2"/>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="lineEdit3"/>
+    </item>
+    <item row="2" column="3">
+     <widget class="QLineEdit" name="lineEdit6"/>
+    </item>
+    <item row="1" column="3">
+     <widget class="QLineEdit" name="lineEdit4"/>
+    </item>
+    <item row="3" column="3">
+     <widget class="QLineEdit" name="lineEdit8"/>
+    </item>
+    <item row="7" column="1">
+     <widget class="QLabel" name="label_result">
+      <property name="styleSheet">
+       <string notr="true">font: 22pt &quot;黑体&quot;;</string>
+      </property>
+      <property name="text">
+       <string>灌溉量：</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">margin：5px;</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionInput"/>
+   <addaction name="actionEdit"/>
+   <addaction name="actionSet"/>
+   <addaction name="actionCal"/>
+   <addaction name="actionOutput"/>
+   <addaction name="actionQuit"/>
+  </widget>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset resource="jsgg.qrc">
+     <normaloff>:/res/退出.png</normaloff>:/res/退出.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="toolTip">
+    <string>退出软件</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionInput">
+   <property name="icon">
+    <iconset resource="jsgg.qrc">
+     <normaloff>:/res/导入.png</normaloff>:/res/导入.png</iconset>
+   </property>
+   <property name="text">
+    <string>导入</string>
+   </property>
+   <property name="toolTip">
+    <string>导入数据</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionEdit">
+   <property name="icon">
+    <iconset resource="jsgg.qrc">
+     <normaloff>:/res/编辑.png</normaloff>:/res/编辑.png</iconset>
+   </property>
+   <property name="text">
+    <string>编辑</string>
+   </property>
+   <property name="toolTip">
+    <string>编辑表格属性</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionSet">
+   <property name="icon">
+    <iconset resource="jsgg.qrc">
+     <normaloff>:/res/设置.png</normaloff>:/res/设置.png</iconset>
+   </property>
+   <property name="text">
+    <string>设置</string>
+   </property>
+   <property name="toolTip">
+    <string>设置初始值</string>
+   </property>
+  </action>
+  <action name="actionCal">
+   <property name="icon">
+    <iconset resource="jsgg.qrc">
+     <normaloff>:/res/计算器.png</normaloff>:/res/计算器.png</iconset>
+   </property>
+   <property name="text">
+    <string>计算</string>
+   </property>
+   <property name="toolTip">
+    <string>计算灌溉用量</string>
+   </property>
+  </action>
+  <action name="actionOutput">
+   <property name="icon">
+    <iconset resource="jsgg.qrc">
+     <normaloff>:/res/导出.png</normaloff>:/res/导出.png</iconset>
+   </property>
+   <property name="text">
+    <string>导出</string>
+   </property>
+   <property name="toolTip">
+    <string>导出计算数据</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="jsgg.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>actionQuitTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionInput</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>actionInputTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionEdit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>actionEditTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSet</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>actionSetTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCal</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>actionCalTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOutput</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>actionOutputTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>actionCalTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>166</x>
+     <y>407</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>226</x>
+     <y>375</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>actionOutputTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>683</x>
+     <y>405</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>701</x>
+     <y>373</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>clearBtnClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>549</x>
+     <y>407</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>565</x>
+     <y>353</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>actionQuitTriggered()</slot>
+  <slot>actionInputTriggered()</slot>
+  <slot>actionEditTriggered()</slot>
+  <slot>actionSetTriggered()</slot>
+  <slot>actionCalTriggered()</slot>
+  <slot>actionOutputTriggered()</slot>
+  <slot>clearBtnClicked()</slot>
+ </slots>
+</ui>

@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="/">
+    <file>res/灌溉.png</file>
+    <file>res/编辑.png</file>
+    <file>res/导出.png</file>
+    <file>res/导入.png</file>
+    <file>res/计算器.png</file>
+    <file>res/设置.png</file>
+    <file>res/退出.png</file>
+  </qresource>
+</RCC>
