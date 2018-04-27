@@ -1,5 +1,11 @@
 <RCC>
   <qresource prefix="/">
+    <file>res/backend.png</file>
+    <file>res/backselected.png</file>
+    <file>res/frontend.png</file>
+    <file>res/frontselected.png</file>
+    <file>res/后退.png</file>
+    <file>res/前进.png</file>
     <file>res/tray1.png</file>
     <file>res/tray.png</file>
     <file>res/灌溉.png</file>

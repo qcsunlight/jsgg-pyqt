@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>356</width>
+    <height>154</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>关于</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="jsgg.qrc">
+    <normaloff>:/res/tray.png</normaloff>:/res/tray.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 12pt &quot;微软雅黑&quot;;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>棉花灌溉量计算软件</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>西北农林科技大学制作</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>联系方式：yshaopeng@nwsuaf.edu.cn</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="jsgg.qrc"/>
+ </resources>
+ <connections/>
+</ui>
