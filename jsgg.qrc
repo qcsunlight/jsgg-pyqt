@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="/">
+    <file>res/tray1.png</file>
+    <file>res/tray.png</file>
     <file>res/灌溉.png</file>
     <file>res/编辑.png</file>
     <file>res/导出.png</file>

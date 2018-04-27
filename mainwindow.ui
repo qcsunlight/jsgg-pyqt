@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>971</width>
-    <height>480</height>
+    <width>997</width>
+    <height>498</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="jsgg.qrc">
-    <normaloff>:/res/灌溉.png</normaloff>:/res/灌溉.png</iconset>
+    <normaloff>:/res/tray1.png</normaloff>:/res/tray1.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">font: 16pt &quot;微软雅黑&quot;;</string>
@@ -24,8 +24,23 @@
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <layout class="QGridLayout" name="gridLayout">
-    <item row="9" column="0" colspan="4">
+    <property name="leftMargin">
+     <number>19</number>
+    </property>
+    <property name="topMargin">
+     <number>19</number>
+    </property>
+    <property name="rightMargin">
+     <number>19</number>
+    </property>
+    <property name="bottomMargin">
+     <number>19</number>
+    </property>
+    <item row="13" column="0" colspan="4">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QPushButton" name="pushButton">
@@ -50,24 +65,7 @@
       </item>
      </layout>
     </item>
-    <item row="5" column="0">
-     <widget class="QLabel" name="label11">
-      <property name="text">
-       <string>小区面积(m^2)</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="2">
-     <widget class="QLabel" name="label4">
-      <property name="text">
-       <string>土壤温度1(℃)</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="1">
-     <widget class="QLineEdit" name="lineEdit13"/>
-    </item>
-    <item row="3" column="2">
+    <item row="7" column="2">
      <widget class="QLabel" name="label8">
       <property name="text">
        <string>土壤温度3(℃)</string>
@@ -84,87 +82,71 @@
       </property>
      </widget>
     </item>
-    <item row="4" column="3">
-     <widget class="QLineEdit" name="lineEdit10"/>
-    </item>
-    <item row="4" column="2">
-     <widget class="QLabel" name="label10">
-      <property name="text">
-       <string>平均温度(℃)</string>
+    <item row="7" column="1">
+     <widget class="QLineEdit" name="lineEdit7">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
      </widget>
     </item>
-    <item row="3" column="1">
-     <widget class="QLineEdit" name="lineEdit7"/>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label11">
+      <property name="text">
+       <string>小区面积(m^2)</string>
+      </property>
+     </widget>
     </item>
-    <item row="2" column="2">
+    <item row="8" column="1">
+     <widget class="QLineEdit" name="lineEdit9">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QLineEdit" name="lineEdit12">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="2">
      <widget class="QLabel" name="label6">
       <property name="text">
        <string>土壤温度2(℃)</string>
       </property>
      </widget>
     </item>
-    <item row="4" column="0">
-     <widget class="QLabel" name="label9">
-      <property name="text">
-       <string>平均水分(Vol%)</string>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit1">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
      </widget>
     </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="label7">
-      <property name="text">
-       <string>土壤水分3(Vol%)</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="2">
-     <widget class="QLabel" name="label12">
-      <property name="text">
-       <string>灌溉深度(m)</string>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="lineEdit11">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
      </widget>
     </item>
     <item row="6" column="0">
-     <widget class="QLabel" name="label13">
-      <property name="text">
-       <string>灌溉目标水分含量(Vol%)</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="2">
-     <widget class="QLabel" name="label14">
-      <property name="text">
-       <string>预计降水量(mm)</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QLineEdit" name="lineEdit9"/>
-    </item>
-    <item row="5" column="1">
-     <widget class="QLineEdit" name="lineEdit11"/>
-    </item>
-    <item row="6" column="3">
-     <widget class="QLineEdit" name="lineEdit14"/>
-    </item>
-    <item row="5" column="3">
-     <widget class="QLineEdit" name="lineEdit12"/>
-    </item>
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="lineEdit1"/>
-    </item>
-    <item row="2" column="1">
-     <widget class="QLineEdit" name="lineEdit5"/>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label3">
-      <property name="text">
-       <string>土壤水分1(Vol%)</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
      <widget class="QLabel" name="label5">
       <property name="text">
        <string>土壤水分2(Vol%)</string>
@@ -178,28 +160,176 @@
       </property>
      </widget>
     </item>
-    <item row="0" column="3">
-     <widget class="QLineEdit" name="lineEdit2"/>
+    <item row="8" column="2">
+     <widget class="QLabel" name="label10">
+      <property name="text">
+       <string>平均温度(℃)</string>
+      </property>
+     </widget>
     </item>
-    <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit3"/>
-    </item>
-    <item row="2" column="3">
-     <widget class="QLineEdit" name="lineEdit6"/>
-    </item>
-    <item row="1" column="3">
-     <widget class="QLineEdit" name="lineEdit4"/>
-    </item>
-    <item row="3" column="3">
-     <widget class="QLineEdit" name="lineEdit8"/>
-    </item>
-    <item row="7" column="1">
+    <item row="11" column="1">
      <widget class="QLabel" name="label_result">
       <property name="styleSheet">
        <string notr="true">font: 22pt &quot;黑体&quot;;</string>
       </property>
       <property name="text">
        <string>灌溉量：</string>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QLabel" name="label9">
+      <property name="text">
+       <string>平均水分(Vol%)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label7">
+      <property name="text">
+       <string>土壤水分3(Vol%)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QLineEdit" name="lineEdit2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="3">
+     <widget class="QLineEdit" name="lineEdit8">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QLabel" name="label12">
+      <property name="text">
+       <string>灌溉深度(m)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="3">
+     <widget class="QLineEdit" name="lineEdit6">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="3">
+     <widget class="QLineEdit" name="lineEdit10">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QLineEdit" name="lineEdit5">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0" colspan="4">
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="3">
+     <widget class="QLineEdit" name="lineEdit4">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QLineEdit" name="lineEdit3">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label3">
+      <property name="text">
+       <string>土壤水分1(Vol%)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="2">
+     <widget class="QLabel" name="label4">
+      <property name="text">
+       <string>土壤温度1(℃)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0" colspan="4">
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label13">
+      <property name="text">
+       <string>灌溉目标水分含量(Vol%)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="lineEdit13">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QLabel" name="label14">
+      <property name="text">
+       <string>预计降水量(mm)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QLineEdit" name="lineEdit14">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
      </widget>
     </item>
@@ -228,6 +358,43 @@
    <addaction name="actionCal"/>
    <addaction name="actionOutput"/>
    <addaction name="actionQuit"/>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>997</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 11pt &quot;微软雅黑&quot;;</string>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>打开数据</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>设置表属性</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>设置默认值</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>导出数据</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
   </widget>
   <action name="actionQuit">
    <property name="icon">
@@ -421,8 +588,8 @@
    <slot>actionCalTriggered()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>166</x>
-     <y>407</y>
+     <x>186</x>
+     <y>444</y>
     </hint>
     <hint type="destinationlabel">
      <x>226</x>
@@ -437,8 +604,8 @@
    <slot>actionOutputTriggered()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>683</x>
-     <y>405</y>
+     <x>697</x>
+     <y>418</y>
     </hint>
     <hint type="destinationlabel">
      <x>701</x>
@@ -453,12 +620,28 @@
    <slot>clearBtnClicked()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>549</x>
-     <y>407</y>
+     <x>501</x>
+     <y>421</y>
     </hint>
     <hint type="destinationlabel">
-     <x>565</x>
-     <y>353</y>
+     <x>511</x>
+     <y>390</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>menuBar</sender>
+   <signal>triggered(QAction*)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>actionInputTriggered()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>53</x>
+     <y>14</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>63</x>
+     <y>-9</y>
     </hint>
    </hints>
   </connection>

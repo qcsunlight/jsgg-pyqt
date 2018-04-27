@@ -11,13 +11,14 @@ last edited: 2018.04.08
 
 import sys
 from PyQt5.QtWidgets import (QMainWindow, QApplication, QDialog,
-        QTableView, QFileDialog, QMessageBox)
+        QTableView, QFileDialog, QMessageBox, QSystemTrayIcon,
+        QAction, QMenu)
 from PyQt5.uic import loadUi
 from PyQt5.QtCore import (Qt, QFile, QVariant)
 import JsggRes
 import os
 import xlrd
-from PyQt5.QtGui import QStandardItemModel, QStandardItem
+from PyQt5.QtGui import (QStandardItemModel, QStandardItem, QIcon)
 from PyQt5.QtSql import (QSqlQuery, QSqlDatabase, QSqlTableModel)
 
 
@@ -51,9 +52,31 @@ class MainWindow(QMainWindow):
         self.ui.lineEdit13.setText(str(defaults[2]))
         self.ui.lineEdit14.setText(str(defaults[3]))
 
+    def addSystemTray(self):
+        # set window tray
+        minimizeAction = QAction("Mi&nimize", self, triggered=self.hide)
+        maximizeAction = QAction("Ma&zimize", self, 
+                triggered=self.showMaximized)
+        restoreAction = QAction("&Restore", self, 
+                triggered=self.showNormal)
+        quitAction = QAction("&Quit", self, triggered=self.close)
+        self.trayIconMenu = QMenu(self)
+        self.trayIconMenu.addAction(minimizeAction)
+        self.trayIconMenu.addAction(maximizeAction)
+        self.trayIconMenu.addAction(restoreAction)
+        self.trayIconMenu.addSeparator()
+        self.trayIconMenu.addAction(quitAction)
+        self.trayIcon = QSystemTrayIcon(self)
+        self.trayIcon.setIcon(QIcon(":/res/tray1.png"))
+        self.trayIcon.setContextMenu(self.trayIconMenu)
+        self.trayIcon.show()
+
     def initUI(self):
         self.ui = loadUi('mainwindow.ui', self)
         # self.setWindowFlag(Qt.FramelessWindowHint)
+        # show window
+        # set window tray
+        self.addSystemTray()
         self.show()
         self.defaults = getDefault()
         self.setDefault(self.defaults)
@@ -63,28 +86,35 @@ class MainWindow(QMainWindow):
         # self.model.setHorizontalHeaderLabels(head)
         # self.ui.tableView.setModel(self.model)
 
+    def closeEvent(self, event):
+        if self.trayIcon.isVisible():
+            self.trayIcon.hide()
+
     def actionQuitTriggered(self):
         self.close()
 
     def actionInputTriggered(self):
-        fileName = QFileDialog.getOpenFileName(self, '加载数据文件',
+        try:
+            fileName = QFileDialog.getOpenFileName(self, '加载数据文件',
                           './', 'Excle Files (*.xls *.xlsx)')
         # print(fileName[0])
-        if fileName[0] is not None:
-            data = getData(fileName[0])
-            # print(data)
-            self.ui.lineEdit1.setText(str(data[0]))
-            self.ui.lineEdit2.setText(str(data[1]))
-            self.ui.lineEdit3.setText(str(data[2]))
-            self.ui.lineEdit4.setText(str(data[3]))
-            self.ui.lineEdit5.setText(str(data[4]))
-            self.ui.lineEdit6.setText(str(data[5]))
-            self.ui.lineEdit7.setText(str(data[6]))
-            self.ui.lineEdit8.setText(str(data[7]))
-            self.avrShui = round((float(data[2]) + float(data[4]) + float(data[6])) / 3, 3)
-            self.avrWen = round((float(data[3]) + float(data[5]) + float(data[7])) / 3, 3)
-            self.ui.lineEdit9.setText(str(self.avrShui))
-            self.ui.lineEdit10.setText(str(self.avrWen))
+            if fileName[0] is not None:
+                data = getData(fileName[0])
+                # print(data)
+                self.ui.lineEdit1.setText(str(data[0]))
+                self.ui.lineEdit2.setText(str(data[1]))
+                self.ui.lineEdit3.setText(str(data[2]))
+                self.ui.lineEdit4.setText(str(data[3]))
+                self.ui.lineEdit5.setText(str(data[4]))
+                self.ui.lineEdit6.setText(str(data[5]))
+                self.ui.lineEdit7.setText(str(data[6]))
+                self.ui.lineEdit8.setText(str(data[7]))
+                self.avrShui = round((float(data[2]) + float(data[4]) + float(data[6])) / 3, 3)
+                self.avrWen = round((float(data[3]) + float(data[5]) + float(data[7])) / 3, 3)
+                self.ui.lineEdit9.setText(str(self.avrShui))
+                self.ui.lineEdit10.setText(str(self.avrWen))
+        except Exception as e:
+            pass
 
     def actionEditTriggered(self):
         pass
@@ -97,10 +127,10 @@ class MainWindow(QMainWindow):
 
     def actionCalTriggered(self):
         self.ui.label_result.setText('灌溉量：')
-        area = float(self.ui.lineEdit11.text()|0)
-        depth = float(self.ui.lineEdit12.text()|0)
-        goal = float(self.ui.lineEdit13.text()|0)
-        expect = float(self.ui.lineEdit14.text()|0)
+        area = float(self.ui.lineEdit11.text() or 0)
+        depth = float(self.ui.lineEdit12.text() or 0)
+        goal = float(self.ui.lineEdit13.text() or 0)
+        expect = float(self.ui.lineEdit14.text() or 0)
         res = round((depth - expect/1000) * (goal - self.avrShui) * area, 2)
         # print(res)
         text = self.ui.label_result.text()
@@ -122,6 +152,10 @@ class MainWindow(QMainWindow):
         self.ui.lineEdit9.setText('')
         self.ui.lineEdit10.setText('')
         self.ui.label_result.setText('灌溉量：')
+
+    def updateValue(self, data):
+
+        pass
 
 
 def initDb():
