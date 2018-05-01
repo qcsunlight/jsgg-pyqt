@@ -651,25 +651,27 @@
      <height>23</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
    <widget class="QMenu" name="menu">
     <property name="title">
      <string>数据</string>
     </property>
-    <addaction name="actionIn"/>
+    <addaction name="actionImport"/>
     <addaction name="separator"/>
-    <addaction name="actionOut"/>
+    <addaction name="actionOutput"/>
+    <addaction name="separator"/>
+    <addaction name="actionCal"/>
    </widget>
    <widget class="QMenu" name="menu_2">
     <property name="title">
      <string>设置</string>
     </property>
     <addaction name="actionSet"/>
-   </widget>
-   <widget class="QMenu" name="menu_3">
-    <property name="title">
-     <string>帮助</string>
-    </property>
-    <addaction name="actionAbout"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
@@ -686,61 +688,60 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="ActionImport"/>
-   <addaction name="actionEdit"/>
+   <addaction name="actionImport"/>
+   <addaction name="actionSet"/>
    <addaction name="actionCal"/>
    <addaction name="actionOutput"/>
    <addaction name="actionQuit"/>
   </widget>
-  <action name="ActionImport">
+  <action name="actionAbout">
+   <property name="text">
+    <string>关于此软件</string>
+   </property>
+  </action>
+  <action name="actionImport">
    <property name="icon">
     <iconset resource="jsgg.qrc">
      <normaloff>:/res/导入.png</normaloff>:/res/导入.png</iconset>
    </property>
    <property name="text">
-    <string>Import</string>
-   </property>
-   <property name="toolTip">
     <string>导入墒情数据</string>
    </property>
-   <property name="shortcut">
-    <string>Ctrl+O</string>
-   </property>
-  </action>
-  <action name="actionEdit">
-   <property name="icon">
-    <iconset resource="jsgg.qrc">
-     <normaloff>:/res/设置.png</normaloff>:/res/设置.png</iconset>
-   </property>
-   <property name="text">
-    <string>Edit</string>
-   </property>
    <property name="toolTip">
-    <string>灌溉目标默认值</string>
-   </property>
-  </action>
-  <action name="actionCal">
-   <property name="icon">
-    <iconset resource="jsgg.qrc">
-     <normaloff>:/res/计算器.png</normaloff>:/res/计算器.png</iconset>
-   </property>
-   <property name="text">
-    <string>Cal</string>
-   </property>
-   <property name="toolTip">
-    <string>计算灌溉量</string>
+    <string>导入数据</string>
    </property>
   </action>
   <action name="actionOutput">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="icon">
     <iconset resource="jsgg.qrc">
      <normaloff>:/res/导出.png</normaloff>:/res/导出.png</iconset>
    </property>
    <property name="text">
-    <string>Output</string>
-   </property>
-   <property name="toolTip">
     <string>导出计算结果</string>
+   </property>
+  </action>
+  <action name="actionCal">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="jsgg.qrc">
+     <normaloff>:/res/计算器.png</normaloff>:/res/计算器.png</iconset>
+   </property>
+   <property name="text">
+    <string>计算灌溉量</string>
+   </property>
+  </action>
+  <action name="actionSet">
+   <property name="icon">
+    <iconset resource="jsgg.qrc">
+     <normaloff>:/res/设置.png</normaloff>:/res/设置.png</iconset>
+   </property>
+   <property name="text">
+    <string>默认值</string>
    </property>
   </action>
   <action name="actionQuit">
@@ -753,31 +754,6 @@
    </property>
    <property name="toolTip">
     <string>退出程序</string>
-   </property>
-  </action>
-  <action name="actionIn">
-   <property name="text">
-    <string>导入</string>
-   </property>
-  </action>
-  <action name="actiondaochu">
-   <property name="text">
-    <string>daochu</string>
-   </property>
-  </action>
-  <action name="actionOut">
-   <property name="text">
-    <string>导出</string>
-   </property>
-  </action>
-  <action name="actionSet">
-   <property name="text">
-    <string>默认值</string>
-   </property>
-  </action>
-  <action name="actionAbout">
-   <property name="text">
-    <string>关于</string>
    </property>
   </action>
  </widget>
@@ -885,58 +861,26 @@
    </hints>
   </connection>
   <connection>
-   <sender>actionIn</sender>
+   <sender>actionAbout</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotAbout()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>504</x>
+     <y>320</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionImport</sender>
    <signal>triggered()</signal>
    <receiver>MainWindow</receiver>
    <slot>slotIn()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>504</x>
-     <y>320</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>ActionImport</sender>
-   <signal>triggered()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>slotIn()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>504</x>
-     <y>320</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>actionOut</sender>
-   <signal>triggered()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>slotOut()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>504</x>
-     <y>320</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>actionOutput</sender>
-   <signal>triggered()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>slotOut()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>-1</x>
@@ -981,26 +925,10 @@
    </hints>
   </connection>
   <connection>
-   <sender>actionAbout</sender>
+   <sender>actionOutput</sender>
    <signal>triggered()</signal>
    <receiver>MainWindow</receiver>
-   <slot>slotAbout()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>504</x>
-     <y>320</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>actionEdit</sender>
-   <signal>triggered()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>slotSet()</slot>
+   <slot>slotOut()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>-1</x>
